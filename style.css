@@ -1,0 +1,327 @@
+/* 全体のリセットと共通設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif JP', 'Georgia', serif;
+    background-color: #fcf9f2; /* 高級感のある薄ベージュ */
+    color: #2c2523; /* 柔らかい漆黒 */
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 600px; /* スマホで見やすい横幅 */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 金色のテキスト装飾 */
+.gold-text {
+    color: #c5a059;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+/* ヘッダーデザイン */
+.main-header {
+    background-color: #7a1f1d; /* 深いワインレッド */
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    border-bottom: 4px solid #c5a059;
+}
+
+.top-face-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #c5a059;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    color: #e2bda0;
+    margin-bottom: 12px;
+}
+
+/* タイトルの文字サイズ調整（スマホでの「占、い」の改行を防止） */
+.main-title {
+    font-size: 1.75rem; 
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    white-space: nowrap; 
+}
+
+.lead-text {
+    font-size: 0.9rem;
+    color: #f7ebd9;
+}
+
+/* コンセプト文章の枠 */
+.concept-box {
+    background-color: #ffffff;
+    border: 1px solid #e8dec9;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #554744;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+/* 注釈・免責事項のスタイル */
+.disclaimer {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e8dec9;
+    font-size: 0.75rem;
+    color: #887672;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* ルール説明ボックス */
+.rule-box {
+    background-color: #ffffff;
+    border: 2px solid #7a1f1d;
+    border-radius: 12px;
+    padding: 25px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(122, 31, 29, 0.05);
+}
+
+.box-title {
+    color: #7a1f1d;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.price-tag {
+    background-color: #7a1f1d;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 0 auto 20px;
+    border: 2px solid #c5a059;
+}
+
+.rule-list h3 {
+    font-size: 0.95rem;
+    color: #7a1f1d;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.rule-list p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.rule-list ul {
+    padding-left: 20px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.rule-list li {
+    margin-bottom: 5px;
+}
+
+/* 自作マップセクション */
+.map-section {
+    background-color: #fff;
+    border: 1px solid #e8dec9;
+    border-radius: 12px;
+    padding: 25px 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.map-desc {
+    font-size: 0.8rem;
+    color: #e63946;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.map-container {
+    width: 100%;
+    background-color: #fffaf0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed #c5a059;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-map-img {
+    width: 100%;       
+    max-width: 100%;   
+    height: auto;      
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* セクション共通 */
+.section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #7a1f1d;
+    margin: 40px 0 5px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #c5a059;
+}
+
+.menu-subtitle {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* メニューカード型レイアウト */
+.menu-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-card {
+    background: #ffffff;
+    border: 1px solid #e8dec9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.full-card {
+    text-align: center;
+    display: block;
+}
+
+.specialist-face {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #7a1f1d;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    flex-shrink: 0; 
+    background-color: #fcf9f2;
+}
+
+.card-content {
+    flex-grow: 1; 
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.menu-card h3 {
+    font-size: 1.25rem;
+    color: #7a1f1d;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+    color: #554744;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.location-badge {
+    display: inline-block;
+    background-color: #f3ede2;
+    color: #7a1f1d;
+    padding: 3px 12px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    border: 1px solid #c5a059;
+}
+
+/* インフォメーション */
+.info-section {
+    background-color: #7a1f1d;
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.info-section .section-title {
+    color: #fff;
+    margin-top: 0;
+}
+
+.info-section .section-title::after {
+    background-color: #fff;
+}
+
+.info-details p {
+    margin-bottom: 10px;
+}
+
+.notes {
+    font-size: 0.8rem;
+    color: #e2bda0;
+    line-height: 1.6;
+}
+
+/* フッター */
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.75rem;
+    color: #887672;
+    background-color: #f3ede2;
+    margin-top: 60px;
+}
+
+/* パソコンなどの大きな画面での表示調整 */
+@media (min-width: 768px) {
+    .main-title {
+        font-size: 2.2rem;
+    }
+    .menu-card {
+        padding: 25px;
+    }
+    .specialist-face {
+        width: 120px;
+        height: 120px;
+    }
+}
