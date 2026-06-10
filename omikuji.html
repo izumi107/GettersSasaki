@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おみくじのご案内 〜ゲッターズ佐々木の占い〜</title>
     <link rel="stylesheet" href="style.css">
+    <!-- JavaScriptファイルを外から読み込む命令 -->
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- 共通のバー -->
     <div class="top-nav-bar">
         <button class="menu-trigger" id="menuTrigger">
             <span></span>
@@ -19,6 +21,7 @@
         <div class="bar-title">湯高祭 3年D組</div>
     </div>
 
+    <!-- プルダウンメニュー -->
     <nav class="pulldown-menu" id="pulldownMenu">
         <ul>
             <li><a href="#" id="menuCloseBtn">❌ メニューを閉じる</a></li>
@@ -32,59 +35,106 @@
         <div class="header-overlay">
             <p class="subtitle">湯高祭３年Ｄ組クラス企画</p>
             <h1>運勢おみくじの種類</h1>
-            <p class="lead-text">出口で引ける、特別な一言アドバイス付きおみくじ</p>
-        </div>
-    </header>
+            <p class="lead-text">当店の占いを体験した方だけが引ける、特別な限定おみくじ</p>
+        </header>
 
     <main class="container">
 
-        <section class="concept-box">
-            <h2>🧧 おみくじは全部で何種類？</h2>
-            <p style="margin-top: 10px;">
-                当店の占いを体験していただいた後、出口にて全員が引くことができます。<br>
-                ゲッターズ佐々木が直感で書き下ろした、湯高祭限定の開運おみくじです！
+        <!-- ★こだわりのシステム案内 -->
+        <section class="concept-box" style="border-left: 5px solid #c5a059;">
+            <h2>🧧 当店のおみくじの秘密</h2>
+            <p style="margin-top: 10px; font-weight: bold; color: #7a1f1d;">
+                ⚠️ たとえ同じ「吉」が出ても、書かれている内容は全て異なります！
+            </p>
+            <p style="margin-top: 5px; font-size: 0.85rem; line-height: 1.6;">
+                友達と同じ「大吉」を引いたとしても、中に書かれたアドバイスやラッキーアイテムは別物！
+                ゲッターズ佐々木が1枚1枚に異なるメッセージを込めた、あなただけの完全1点モノおみくじです。
             </p>
         </section>
 
-        <section class="menu-section">
-            <div class="menu-grid">
+        <!-- 🌟 【独立】ノーマルみくじ セクション -->
+        <section class="omikuji-group-section" style="margin-top: 30px;">
+            <div class="group-header normal-theme">
+                <span class="group-icon">🌟</span>
+                <h2>ノーマルみくじ</h2>
+            </div>
+            <p class="group-desc">全体運・学業・勝負運・日常のラッキーを占う王道のおみくじです。幅広い運勢と、めったに出ないお楽しみ要素が含まれています。</p>
+            
+            <!-- 吉バッジの横並び一覧 -->
+            <div class="kichi-flex-container">
+                <div class="kichi-badge badge-daikichi">超大吉</div>
+                <div class="kichi-badge badge-kichi">大吉</div>
+                <div class="kichi-badge badge-kichi">吉</div>
+                <div class="kichi-badge badge-kichi">中吉</div>
+                <div class="kichi-badge badge-kichi">凶</div>
+                <div class="kichi-badge badge-kyou">大凶</div>
+                <div class="kichi-badge badge-secret">SECRET</div>
+            </div>
 
-                <div class="menu-card omikuji-card">
-                    <div class="card-content">
-                        <div class="card-icon">👑</div>
-                        <h3>【超レア】ゲッターズ大吉</h3>
-                        <p>滅多に出ない幻のおみくじ！これが出た人は、今年の湯高祭で一番ラッキーな人になれるかも…！？</p>
-                    </div>
+            <!-- ノーマルみくじ解説 -->
+            <div class="omikuji-detail-list">
+                <div class="detail-item border-daikichi">
+                    <span class="detail-kichi-name text-daikichi">👑 超大吉</span>
+                    <p class="detail-text">めったに出ない最強の運気！今日のあなたの決断はすべて正解になります。自信を持って湯高祭を楽しんで！</p>
                 </div>
-
-                <div class="menu-card omikuji-card">
-                    <div class="card-content">
-                        <div class="card-icon">☀️</div>
-                        <h3>学業・勝負運おみくじ</h3>
-                        <p>次のテストの点数が上がるかも？勉強や部活、今頑張っていることへのモチベーションが爆上がりするアドバイス付き！</p>
-                    </div>
+                <div class="detail-item">
+                    <span class="detail-kichi-name text-normal">✨ 大吉</span>
+                    <p class="detail-text">全体運が大幅に上昇中。日頃の努力が実を結びやすい日です。やりたかったことに挑戦するチャンス！</p>
                 </div>
-
-                <div class="menu-card omikuji-card">
-                    <div class="card-content">
-                        <div class="card-icon">❤️</div>
-                        <h3>恋愛・人間関係おみくじ</h3>
-                        <p>気になるあの人との距離が縮まるヒントや、クラスメイトともっと仲良くなれる秘密のラッキーアクションを伝授します。</p>
-                    </div>
+                <div class="detail-item">
+                    <span class="detail-kichi-name text-normal">☀️ 吉</span>
+                    <p class="detail-text">とても安定した穏やかな運気です。不思議とタイミングが良く、物事がスムーズに進む最高の1日になります。</p>
                 </div>
-
-                <div class="menu-card omikuji-card">
-                    <div class="card-content">
-                        <div class="card-icon">⚡</div>
-                        <h3>ユニークおみくじ（ネタ枠）</h3>
-                        <p>ちょっとクスッと笑える、ゲッターズ佐々木ならではの変化球アドバイス。「ラッキーアイテム：習字の筆」などがあるかも？</p>
-                    </div>
+                <div class="detail-item">
+                    <span class="detail-kichi-name text-normal">🎵 中吉</span>
+                    <p class="detail-text">まずまずの運勢。可もなく不可もなしですが、午後からじわじわとテンションが上がる嬉しい出来事がある予感。</p>
                 </div>
-
+                <div class="detail-item">
+                    <span class="detail-kichi-name text-normal">⚡ 凶</span>
+                    <p class="detail-text">小さなミスに注意。でも確認をいつもより1回多くするだけで、すべての災難を回避してプラスに変えられます。</p>
+                </div>
+                <div class="detail-item border-kyou">
+                    <span class="detail-kichi-name text-kyou">💀 大凶</span>
+                    <p class="detail-text">逆に超レア！ここが底なので、あとは上がるだけ。このカードを引いた時点で今日の厄はすべて落ちました！</p>
+                </div>
+                <div class="detail-item border-secret">
+                    <span class="detail-kichi-name text-secret">❓ その他シークレット</span>
+                    <p class="detail-text">上記のどれにも属さない、引いた人だけのお楽しみ枠が存在します。一体どんな運勢が書かれているのか……自分の目で確かめてみてください！</p>
+                </div>
             </div>
         </section>
 
-        <div style="text-align: center; margin-top: 40px;">
+
+        <!-- 💘 【独立】恋みくじ セクション -->
+        <section class="omikuji-group-section" style="margin-top: 40px;">
+            <div class="group-header love-theme">
+                <span class="group-icon">💘</span>
+                <h2>恋みくじ</h2>
+            </div>
+            <p class="group-desc" style="color: #e63946; font-weight: bold; margin-bottom: 5px;">⚠️ 排出されるのは「大吉」と「大凶」のみ！</p>
+            <p class="group-desc">ノーマルみくじとは完全に別システムです。中間一切なし、天国か地獄かの2択であなたの恋愛運を過激に占います（※もちろん、同じ大吉でも書かれている内容は1枚ずつ違います）。</p>
+            
+            <!-- 吉バッジの横並び一覧（2択を強調） -->
+            <div class="kichi-flex-container">
+                <div class="kichi-badge badge-love-daikichi">大吉</div>
+                <div class="kichi-badge badge-kyou" style="min-width: 80px;">大凶</div>
+            </div>
+
+            <!-- 恋みくじ解説 -->
+            <div class="omikuji-detail-list">
+                <div class="detail-item border-love-daikichi">
+                    <span class="detail-kichi-name text-love-daikichi">❤️ 大吉（天国・恋愛成就の予感）</span>
+                    <p class="detail-text">恋愛運メーターが限界突破！あなたの魅力がいつも以上に輝く日です。引いたカードによって「急接近のコツ」や「相性の良いタイプ」など、異なるアプローチ方法が書かれています！</p>
+                </div>
+                <div class="detail-item border-kyou">
+                    <span class="detail-kichi-name text-kyou">🖤 大凶（地獄・波乱の予感…！？）</span>
+                    <p class="detail-text">一筋縄ではいかない恋の嵐が接近中。空回りしやすい運気ですが、引いたカードによって「ギャップ萌えを狙う逆転策」など、嵐を笑いに変えて乗り切るためのゲッターズ流アドバイスがそれぞれ書かれています！</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 戻るボタン -->
+        <div style="text-align: center; margin-top: 50px;">
             <a href="index.html" class="back-btn">← 占いのトップページへ戻る</a>
         </div>
 

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ゲッターズ佐々木の占い 〜運命の部屋〜</title>
     <link rel="stylesheet" href="style.css">
+    <!-- JavaScriptファイルを外から読み込む命令 -->
     <script src="script.js" defer></script>
+    <!-- 高級感を出すためのGoogle Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- 上部の固定バー -->
     <div class="top-nav-bar">
         <button class="menu-trigger" id="menuTrigger">
             <span></span>
@@ -19,6 +22,7 @@
         <div class="bar-title">湯高祭 3年D組</div>
     </div>
 
+    <!-- 画面上部から降りてくるプルダウンメニュー -->
     <nav class="pulldown-menu" id="pulldownMenu">
         <ul>
             <li><a href="#" id="menuCloseBtn">❌ メニューを閉じる</a></li>
@@ -26,19 +30,23 @@
         </ul>
     </nav>
 
+    <!-- 背景を暗転させるための黒い膜 -->
     <div class="overlay-mask" id="overlayMask"></div>
 
+    <!-- ヒーローヘッダー -->
     <header class="main-header" style="margin-top: 50px;">
         <div class="header-overlay">
             <img src="top-face.png" alt="ゲッターズ佐々木" class="top-face-img">
             <p class="subtitle">湯高祭３年Ｄ組クラス企画</p>
             <h1 class="main-title"><span class="gold-text">ゲッターズ佐々木</span>の占い</h1>
-            <p class="lead-text">あなたの過去・現在、そこで未来を解き明かす</p>
+            <p class="lead-text">あなたの過去・現在、そして未来を解き明かす</p>
         </div>
     </header>
 
+    <!-- メインコンテンツ -->
     <main class="container">
 
+        <!-- コンセプト紹介 -->
         <section class="concept-box">
             <p>
                 数々の的中実績（？）を誇る「ゲッターズ佐々木」が監修。<br>
@@ -47,6 +55,7 @@
             <p class="disclaimer">※当館の占いはエンターテインメントです。鑑定結果が必ずしも現実になるとは限りませんので、未来を切り開くためのひとつのヒントとしてお楽しみください。</p>
         </section>
 
+        <!-- 料金・スタンプラリールール -->
         <section class="rule-box">
             <h2 class="box-title">🔮 遊び方 ＆ ルール 🔮</h2>
             <div class="price-tag">入場料：50円</div>
@@ -63,6 +72,7 @@
             </div>
         </section>
 
+        <!-- 館内マップセクション -->
         <section class="map-section">
             <h2 class="section-title">館内マップ（2階 3年D組）</h2>
             <p class="map-desc">※入り口から出口まで一方通行のワンウェイ構造です</p>
@@ -72,12 +82,14 @@
             </div>
         </section>
 
+        <!-- 占いメニュー（全7種類） -->
         <section class="menu-section">
             <h2 class="section-title">七大占術メニュー</h2>
             <p class="menu-subtitle">※A〜Fの中から3つを選んでスタンプを押してもらおう！</p>
             
             <div class="menu-grid">
                 
+                <!-- Aブース：水晶占い -->
                 <div class="menu-card">
                     <img src="face-crystal.png" alt="水晶スペシャリスト" class="specialist-face">
                     <div class="card-content">
@@ -88,26 +100,29 @@
                     </div>
                 </div>
 
-                <div class="menu-card">
-                    <img src="face-tarot.png" alt="タロットスペシャリスト" class="specialist-face">
-                    <div class="card-content">
-                        <div class="card-icon">🃏</div>
-                        <h3>タロット占い</h3>
-                        <p>神秘のカードが導き出す、あなたの直近の運勢。今抱えているモヤモヤを解決するための具体的なヒントを伝えます。</p>
-                        <span class="location-badge">Bブース</span>
-                    </div>
-                </div>
-
+                <!-- ★【変更】Bブース：手相占い（2番目に移動） -->
                 <div class="menu-card">
                     <img src="face-teso.png" alt="手相スペシャリスト" class="specialist-face">
                     <div class="card-content">
                         <div class="card-icon">✋</div>
                         <h3>手相占い</h3>
                         <p>手のひらに刻まれた、あなただけの人生の地図を解読します。恋愛線や生命線から未来のシグナルを読み取ります。</p>
+                        <span class="location-badge">Bブース</span>
+                    </div>
+                </div>
+
+                <!-- ★【変更】Cブース：タロット占い（3番目に移動） -->
+                <div class="menu-card">
+                    <img src="face-tarot.png" alt="タロットスペシャリスト" class="specialist-face">
+                    <div class="card-content">
+                        <div class="card-icon">🃏</div>
+                        <h3>タロット占い</h3>
+                        <p>神秘のカードが導き出す、あなたの直近の運勢。今抱えているモヤモヤを解決するための具体的なヒントを伝えます。</p>
                         <span class="location-badge">Cブース</span>
                     </div>
                 </div>
 
+                <!-- Dブース：姓名占い -->
                 <div class="menu-card">
                     <img src="face-seimei.png" alt="姓名占いスペシャリスト" class="specialist-face">
                     <div class="card-content">
@@ -118,6 +133,7 @@
                     </div>
                 </div>
 
+                <!-- Eブース：心理テスト -->
                 <div class="menu-card">
                     <img src="face-shinri.png" alt="心理テストスペシャリスト" class="specialist-face">
                     <div class="card-content">
@@ -128,6 +144,7 @@
                     </div>
                 </div>
 
+                <!-- Fブース：相性診断 -->
                 <div class="menu-card">
                     <img src="face-compatibility.png" alt="相性診断スペシャリスト" class="specialist-face">
                     <div class="card-content">
@@ -138,16 +155,24 @@
                     </div>
                 </div>
 
+                <!-- 出口：おみくじ -->
                 <div class="menu-card full-card">
                     <div class="card-icon">🧧</div>
                     <h3>本日の運勢おみくじ</h3>
                     <p>ご来店いただいた方全員が最後に引ける、ゲッターズ佐々木流の一言開運アドバイス付き限定おみくじです。</p>
-                    <span class="location-badge">出口（最後のお楽しみ）</span>
+                    
+                    <!-- ★おみくじページへ飛ぶリンクボタンを追加★ -->
+                    <div class="omikuji-link-container">
+                        <a href="omikuji.html" class="omikuji-btn">おみくじの種類・運勢はこちら ➔</a>
+                    </div>
+
+                    <span class="location-badge" style="margin-top: 15px;">出口（最後のお楽しみ）</span>
                 </div>
 
             </div>
         </section>
 
+        <!-- クラス企画インフォメーション -->
         <section class="info-section">
             <h2 class="section-title">ご案内</h2>
             <div class="info-details">
@@ -159,6 +184,7 @@
 
     </main>
 
+    <!-- フッター -->
     <footer class="main-footer">
         <p>&copy; 2026 湯高祭 3年D組「ゲッターズ佐々木の占い」プロジェクト. All Rights Reserved.</p>
     </footer>

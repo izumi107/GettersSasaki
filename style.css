@@ -436,3 +436,269 @@ body {
         height: 120px;
     }
 }
+/* ==========================================
+   新・おみくじページ専用 横並びレイアウト
+   ========================================== */
+
+/* 各おみくじグループの枠 */
+.omikuji-group-section {
+    background-color: #ffffff;
+    border: 1px solid #e8dec9;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+/* ジャンルの見出し */
+.group-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+}
+
+.group-header h2 {
+    font-size: 1.3rem;
+}
+
+/* テーマごとのアンダーラインの色 */
+.normal-theme {
+    border-bottom: 2px solid #7a1f1d;
+    color: #7a1f1d;
+}
+.love-theme {
+    border-bottom: 2px solid #d65a7f; /* 可愛いピンク系 */
+    color: #d65a7f;
+}
+
+.group-icon {
+    font-size: 1.4rem;
+}
+
+.group-desc {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* ★ 吉を横に並べるマジック（はみ出したら自動で折り返す） */
+.kichi-flex-container {
+    display: flex;
+    flex-wrap: wrap; /* 横幅がいっぱいになったら自動で次の段に折り返す */
+    gap: 10px;       /* バッジ同士のすき間 */
+    justify-content: center; /* 中央寄せ */
+    margin-bottom: 20px;
+}
+
+/* 吉バッジの基本スタイル */
+.kichi-badge {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 6px;
+    text-align: center;
+    min-width: 80px; /* バッジの最低限の横幅を揃える */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 普通のおみくじの色分け */
+.badge-daikichi {
+    background-color: #f6e6c2;
+    color: #c5a059;
+    border: 2px solid #c5a059;
+}
+.badge-kichi {
+    background-color: #f7ede2;
+    color: #7a1f1d;
+    border: 1px solid #7a1f1d;
+}
+.badge-kyou {
+    background-color: #eaeaea;
+    color: #555555;
+    border: 1px solid #999999;
+}
+
+/* 恋みくじの色分け */
+.badge-love-daikichi {
+    background-color: #ffe3ec;
+    color: #d65a7f;
+    border: 2px solid #d65a7f;
+    animation: pulse 2s infinite; /* ちょっと目立たせるお遊び */
+}
+.badge-love {
+    background-color: #fff0f5;
+    color: #e57399;
+    border: 1px solid #e57399;
+}
+
+.section-notice {
+    font-size: 0.75rem;
+    color: #887672;
+    line-height: 1.5;
+    background-color: #fffbf7;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* 特大吉がほんのり鼓動するアニメーション */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+/* ==========================================
+   おみくじ詳細解説用の追加スタイル
+   ========================================== */
+
+/* 解説一覧を包む枠 */
+.omikuji-detail-list {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 各解説アイテムの基本デザイン */
+.detail-item {
+    background-color: #fffbf7;
+    border: 1px solid #f0e6d2;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+}
+
+/* 吉の名前のスタイル */
+.detail-kichi-name {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* 解説の文章 */
+.detail-text {
+    font-size: 0.85rem;
+    color: #443c3a;
+    line-height: 1.6;
+    margin-bottom: 0 !important; /* 上書き防止 */
+}
+
+/* 特別枠の左線アクセント調整 */
+.border-daikichi {
+    border-left: 5px solid #c5a059;
+    background-color: #fffdf9;
+}
+.border-kyou {
+    border-left: 5px solid #999999;
+    background-color: #f7f7f7;
+}
+.border-love-daikichi {
+    border-left: 5px solid #d65a7f;
+    background-color: #fffafb;
+}
+
+/* 文字のカラーバリエーション */
+.text-daikichi { color: #b2883b; }
+.text-normal { color: #7a1f1d; }
+.text-kyou { color: #555555; }
+.text-love-daikichi { color: #d65a7f; }
+.text-love { color: #e57399; }
+/* ==========================================
+   おみくじ詳細解説用の追加スタイル
+   ========================================== */
+
+/* 解説一覧を包む枠 */
+.omikuji-detail-list {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* 各解説アイテムの基本デザイン */
+.detail-item {
+    background-color: #fffbf7;
+    border: 1px solid #f0e6d2;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: left;
+}
+
+/* 吉の名前のスタイル */
+.detail-kichi-name {
+    display: block;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* 解説の文章 */
+.detail-text {
+    font-size: 0.85rem;
+    color: #443c3a;
+    line-height: 1.6;
+    margin-bottom: 0 !important;
+}
+
+/* 特別枠の左線アクセント調整 */
+.border-daikichi {
+    border-left: 5px solid #c5a059;
+    background-color: #fffdf9;
+}
+.border-kyou {
+    border-left: 5px solid #999999;
+    background-color: #f7f7f7;
+}
+.border-love-daikichi {
+    border-left: 5px solid #d65a7f;
+    background-color: #fffafb;
+}
+.border-secret {
+    border-left: 5px solid #8a2be2;
+    background-color: #fcfaff;
+}
+
+/* 文字のカラーバリエーション */
+.text-daikichi { color: #b2883b; }
+.text-normal { color: #7a1f1d; }
+.text-kyou { color: #555555; }
+.text-love-daikichi { color: #d65a7f; }
+.text-secret { color: #8a2be2; }
+
+/* シークレットバッジ専用 */
+.badge-secret {
+    background-color: #f3e8ff;
+    color: #8a2be2;
+    border: 1px dashed #8a2be2;
+}
+/* ==========================================
+   トップページおみくじボタン用追加スタイル
+   ========================================== */
+.omikuji-link-container {
+    margin: 15px 0;
+}
+
+.omikuji-btn {
+    display: inline-block;
+    background-color: #f6e6c2; /* 上品なゴールド風 */
+    color: #7a1f1d;            /* 3年D組のテーマ赤 */
+    border: 2px solid #c5a059;
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;       /* 丸みをつけてボタンっぽく */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* パソコンやスマホでタップしたときの動き */
+.omikuji-btn:hover, .omikuji-btn:active {
+    background-color: #7a1f1d;
+    color: #ffffff;
+    border-color: #7a1f1d;
+    transform: translateY(-2px); /* ほんの少し浮き上がるお遊び */
+    box-shadow: 0 6px 12px rgba(122, 31, 29, 0.2);
+}
