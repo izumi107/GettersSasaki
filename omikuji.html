@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじのご案内 〜ゲッターズ佐々木の占い〜</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-nav-bar">
+        <button class="menu-trigger" id="menuTrigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="bar-title">湯高祭 3年D組</div>
+    </div>
+
+    <nav class="pulldown-menu" id="pulldownMenu">
+        <ul>
+            <li><a href="#" id="menuCloseBtn">❌ メニューを閉じる</a></li>
+            <li><a href="index.html" class="menu-item">🔮 占いトップページへ</a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay-mask" id="overlayMask"></div>
+
+    <header class="main-header" style="margin-top: 50px; padding: 40px 20px;">
+        <div class="header-overlay">
+            <p class="subtitle">湯高祭３年Ｄ組クラス企画</p>
+            <h1>運勢おみくじの種類</h1>
+            <p class="lead-text">出口で引ける、特別な一言アドバイス付きおみくじ</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="concept-box">
+            <h2>🧧 おみくじは全部で何種類？</h2>
+            <p style="margin-top: 10px;">
+                当店の占いを体験していただいた後、出口にて全員が引くことができます。<br>
+                ゲッターズ佐々木が直感で書き下ろした、湯高祭限定の開運おみくじです！
+            </p>
+        </section>
+
+        <section class="menu-section">
+            <div class="menu-grid">
+
+                <div class="menu-card omikuji-card">
+                    <div class="card-content">
+                        <div class="card-icon">👑</div>
+                        <h3>【超レア】ゲッターズ大吉</h3>
+                        <p>滅多に出ない幻のおみくじ！これが出た人は、今年の湯高祭で一番ラッキーな人になれるかも…！？</p>
+                    </div>
+                </div>
+
+                <div class="menu-card omikuji-card">
+                    <div class="card-content">
+                        <div class="card-icon">☀️</div>
+                        <h3>学業・勝負運おみくじ</h3>
+                        <p>次のテストの点数が上がるかも？勉強や部活、今頑張っていることへのモチベーションが爆上がりするアドバイス付き！</p>
+                    </div>
+                </div>
+
+                <div class="menu-card omikuji-card">
+                    <div class="card-content">
+                        <div class="card-icon">❤️</div>
+                        <h3>恋愛・人間関係おみくじ</h3>
+                        <p>気になるあの人との距離が縮まるヒントや、クラスメイトともっと仲良くなれる秘密のラッキーアクションを伝授します。</p>
+                    </div>
+                </div>
+
+                <div class="menu-card omikuji-card">
+                    <div class="card-content">
+                        <div class="card-icon">⚡</div>
+                        <h3>ユニークおみくじ（ネタ枠）</h3>
+                        <p>ちょっとクスッと笑える、ゲッターズ佐々木ならではの変化球アドバイス。「ラッキーアイテム：習字の筆」などがあるかも？</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="back-btn">← 占いのトップページへ戻る</a>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 湯高祭 3年D組「ゲッターズ佐々木の占い」プロジェクト. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const trigger = document.getElementById('menuTrigger');
+        const menu = document.getElementById('pulldownMenu');
+        const mask = document.getElementById('overlayMask');
+        const closeBtn = document.getElementById('menuCloseBtn');
+
+        function toggleMenu() {
+            menu.classList.toggle('active');
+            mask.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            menu.classList.remove('active');
+            mask.classList.remove('active');
+        }
+
+        trigger.addEventListener('click', toggleMenu);
+        mask.addEventListener('click', closeMenu);
+        closeBtn.addEventListener('click', (e) => { e.preventDefault(); closeMenu(); });
+    </script>
+
+</body>
+</html>

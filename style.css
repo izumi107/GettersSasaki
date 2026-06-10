@@ -12,21 +12,142 @@ body {
     line-height: 1.8;
 }
 
+/* 画面最上部の固定バー */
+.top-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #7a1f1d;
+    border-bottom: 2px solid #c5a059;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    z-index: 1000;
+}
+
+.bar-title {
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-left: 15px;
+    letter-spacing: 0.1em;
+}
+
+/* 三本線ボタン */
+.menu-trigger {
+    background: none;
+    border: none;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-trigger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #c5a059;
+    border-radius: 2px;
+}
+
+/* プルダウンメニュー */
+.pulldown-menu {
+    position: fixed;
+    top: -350px; 
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 4px solid #7a1f1d;
+    z-index: 999;
+    transition: top 0.4s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.pulldown-menu.active {
+    top: 50px; 
+}
+
+.pulldown-menu ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.pulldown-menu li a {
+    display: block;
+    padding: 12px 20px;
+    color: #2c2523;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-bottom: 1px solid #f3ede2;
+}
+
+.highlight-item {
+    background-color: #fff0f0;
+    color: #7a1f1d !important;
+}
+
+/* 暗転マスク */
+.overlay-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.overlay-mask.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* おみくじ専用カード線 */
+.omikuji-card {
+    border-left: 5px solid #c5a059;
+    padding-left: 15px;
+}
+
+/* トップへ戻るリンク */
+.back-btn {
+    display: inline-block;
+    color: #7a1f1d;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-bottom: 2px solid #7a1f1d;
+    padding-bottom: 3px;
+    transition: opacity 0.2s;
+}
+
+.back-btn:hover {
+    opacity: 0.7;
+}
+
+/* --- ベースデザイン --- */
 .container {
-    max-width: 600px; /* スマホで見やすい横幅 */
+    max-width: 600px; 
     margin: 0 auto;
     padding: 20px;
 }
 
-/* 金色のテキスト装飾 */
 .gold-text {
     color: #c5a059;
     text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
 }
 
-/* ヘッダーデザイン */
 .main-header {
-    background-color: #7a1f1d; /* 深いワインレッド */
+    background-color: #7a1f1d; 
     color: #ffffff;
     text-align: center;
     padding: 60px 20px;
@@ -52,7 +173,6 @@ body {
     margin-bottom: 12px;
 }
 
-/* タイトルの文字サイズ調整（スマホでの「占、い」の改行を防止） */
 .main-title {
     font-size: 1.75rem; 
     margin-bottom: 15px;
@@ -66,7 +186,6 @@ body {
     color: #f7ebd9;
 }
 
-/* コンセプト文章の枠 */
 .concept-box {
     background-color: #ffffff;
     border: 1px solid #e8dec9;
@@ -80,7 +199,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
-/* 注釈・免責事項のスタイル */
 .disclaimer {
     margin-top: 15px;
     padding-top: 15px;
@@ -91,7 +209,6 @@ body {
     line-height: 1.5;
 }
 
-/* ルール説明ボックス */
 .rule-box {
     background-color: #ffffff;
     border: 2px solid #7a1f1d;
@@ -142,7 +259,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* 自作マップセクション */
 .map-section {
     background-color: #fff;
     border: 1px solid #e8dec9;
@@ -178,7 +294,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* セクション共通 */
 .section-title {
     text-align: center;
     font-size: 1.5rem;
@@ -206,7 +321,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* メニューカード型レイアウト */
 .menu-grid {
     display: flex;
     flex-direction: column;
@@ -273,7 +387,6 @@ body {
     border: 1px solid #c5a059;
 }
 
-/* インフォメーション */
 .info-section {
     background-color: #7a1f1d;
     color: #fff;
@@ -302,7 +415,6 @@ body {
     line-height: 1.6;
 }
 
-/* フッター */
 .main-footer {
     text-align: center;
     padding: 40px 20px;
@@ -312,7 +424,6 @@ body {
     margin-top: 60px;
 }
 
-/* パソコンなどの大きな画面での表示調整 */
 @media (min-width: 768px) {
     .main-title {
         font-size: 2.2rem;
