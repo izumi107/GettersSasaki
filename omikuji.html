@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おみくじのご案内 〜ゲッターズ佐々木の占い〜</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -92,27 +93,6 @@
     <footer class="main-footer">
         <p>&copy; 2026 湯高祭 3年D組「ゲッターズ佐々木の占い」プロジェクト. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        const trigger = document.getElementById('menuTrigger');
-        const menu = document.getElementById('pulldownMenu');
-        const mask = document.getElementById('overlayMask');
-        const closeBtn = document.getElementById('menuCloseBtn');
-
-        function toggleMenu() {
-            menu.classList.toggle('active');
-            mask.classList.toggle('active');
-        }
-
-        function closeMenu() {
-            menu.classList.remove('active');
-            mask.classList.remove('active');
-        }
-
-        trigger.addEventListener('click', toggleMenu);
-        mask.addEventListener('click', closeMenu);
-        closeBtn.addEventListener('click', (e) => { e.preventDefault(); closeMenu(); });
-    </script>
 
 </body>
 </html>

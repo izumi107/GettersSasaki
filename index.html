@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ゲッターズ佐々木の占い 〜運命の部屋〜</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -27,13 +28,12 @@
 
     <div class="overlay-mask" id="overlayMask"></div>
 
-
     <header class="main-header" style="margin-top: 50px;">
         <div class="header-overlay">
             <img src="top-face.png" alt="ゲッターズ佐々木" class="top-face-img">
             <p class="subtitle">湯高祭３年Ｄ組クラス企画</p>
             <h1 class="main-title"><span class="gold-text">ゲッターズ佐々木</span>の占い</h1>
-            <p class="lead-text">あなたの過去・現在、そして未来を解き明かす</p>
+            <p class="lead-text">あなたの過去・現在、そこで未来を解き明かす</p>
         </div>
     </header>
 
@@ -162,27 +162,6 @@
     <footer class="main-footer">
         <p>&copy; 2026 湯高祭 3年D組「ゲッターズ佐々木の占い」プロジェクト. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        const trigger = document.getElementById('menuTrigger');
-        const menu = document.getElementById('pulldownMenu');
-        const mask = document.getElementById('overlayMask');
-        const closeBtn = document.getElementById('menuCloseBtn');
-
-        function toggleMenu() {
-            menu.classList.toggle('active');
-            mask.classList.toggle('active');
-        }
-
-        function closeMenu() {
-            menu.classList.remove('active');
-            mask.classList.remove('active');
-        }
-
-        trigger.addEventListener('click', toggleMenu);
-        mask.addEventListener('click', closeMenu);
-        closeBtn.addEventListener('click', (e) => { e.preventDefault(); closeMenu(); });
-    </script>
 
 </body>
 </html>
